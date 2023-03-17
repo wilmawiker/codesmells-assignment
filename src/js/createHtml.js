@@ -1,65 +1,69 @@
 import { getPodcasts } from "./api";
 
-const podCastContainer = document.querySelector(".section__podlist-pods");
+const podCastContainer = document.querySelector(".podcastList");
 
 let i = 0;
 
 export async function createHtml() {
   const podCasts = await getPodcasts();
   podCasts.programs.forEach((podcast) => {
-    const innerArticle = createInnerArticle();
+    const podcastInList = createInnerArticle();
 
     createImg();
 
-    const textDiv = createTextDiv();
+    const podcastTitleAndDesc = createTextDiv();
 
     createHeader();
     createP();
     createLink();
 
     function createInnerArticle() {
-      const innerArticle = document.createElement("article");
-      innerArticle.setAttribute("class", "section__article-innerarticle");
-      innerArticle.setAttribute("tabindex", "1");
-      podCastContainer.appendChild(innerArticle);
-      return innerArticle;
+      const podcastInList = document.createElement("article");
+      podcastInList.setAttribute("class", "podcast");
+      podcastInList.setAttribute("tabindex", "1");
+      podCastContainer.appendChild(podcastInList);
+      return podcastInList;
     }
 
     function createTextDiv() {
-      const textDiv = document.createElement("div");
-      textDiv.setAttribute("class", "section__article-div");
-      innerArticle.appendChild(textDiv);
-      return textDiv;
+      const podcastTitleAndDesc = document.createElement("div");
+      podcastTitleAndDesc.setAttribute("class", "podcast__name");
+      podcastInList.appendChild(podcastTitleAndDesc);
+      return podcastTitleAndDesc;
     }
 
     function createLink() {
-      const linkPlacement = document.createElement("a");
+      const linkToPodcast = document.createElement("a");
       const linkText = document.createTextNode("Lyssna här");
-      linkPlacement.setAttribute("href", podcast.programurl);
-      linkPlacement.setAttribute("tabindex", "1");
-      linkPlacement.appendChild(linkText);
-      textDiv.appendChild(linkPlacement);
+      linkToPodcast.setAttribute("href", podcast.programurl);
+      linkToPodcast.setAttribute("class", "podcast__link");
+      linkToPodcast.setAttribute("tabindex", "1");
+      linkToPodcast.appendChild(linkText);
+      podcastTitleAndDesc.appendChild(linkToPodcast);
     }
     function createImg() {
-      const imgPlacement = document.createElement("IMG");
-      imgPlacement.setAttribute("src", podcast.socialimage);
-      imgPlacement.setAttribute("width", "100");
-      imgPlacement.setAttribute("height", "100");
-      innerArticle.appendChild(imgPlacement);
+      const podcastImg = document.createElement("IMG");
+      podcastImg.setAttribute("src", podcast.socialimage);
+      podcastImg.setAttribute("class", "podcast__img");
+      podcastImg.setAttribute("width", "100");
+      podcastImg.setAttribute("height", "100");
+      podcastInList.appendChild(podcastImg);
     }
 
     function createP() {
-      const descPlacement = document.createElement("p");
+      const podcastDesc = document.createElement("p");
       const desc = document.createTextNode(podcast.description);
-      descPlacement.appendChild(desc);
-      textDiv.appendChild(descPlacement);
+      podcastDesc.setAttribute("class", "podcast__desc");
+      podcastDesc.appendChild(desc);
+      podcastTitleAndDesc.appendChild(podcastDesc);
     }
 
     function createHeader() {
-      const headerPlacement = document.createElement("h2");
+      const podcastTitle = document.createElement("h2");
+      podcastTitle.setAttribute("class", "podcast__title");
       const programName = document.createTextNode(podcast.name);
-      headerPlacement.appendChild(programName);
-      textDiv.appendChild(headerPlacement);
+      podcastTitle.appendChild(programName);
+      podcastTitleAndDesc.appendChild(podcastTitle);
     }
   });
 }
