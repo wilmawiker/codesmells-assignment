@@ -14,19 +14,19 @@ body {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 
-  .section__article-innerarticle {
+  .podcast {
     display: flex;
     flex-direction: row;
     margin-bottom: 2rem;
 
-    .section__article-div {
+    .podcast__name {
       display: inline-flex;
       flex-direction: column;
       margin-top: 0;
       margin-left: 1rem;
     }
 
-    img {
+    .podcast__img {
       margin-top: 0.5rem;
     }
 
@@ -35,17 +35,17 @@ body {
       text-align: center;
     }
 
-    h2 {
+    .podcast__title {
       font-size: 1.25rem;
       margin: 0;
     }
 
-    p {
+    .podcast__desc {
       font-size: 1rem;
       margin: 0;
     }
 
-    a {
+    .podcast__link {
       color: $primary-color;
       cursor: pointer;
 
@@ -72,14 +72,14 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
-  .section__podlist-pods {
+  .podcastList {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .section__podlist-pods {
+  .podcastList {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
