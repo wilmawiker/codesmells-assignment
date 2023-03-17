@@ -1,6 +1,8 @@
 import { getPodcasts } from "./api";
 
-const podCastContainer = document.querySelector(".podcastList");
+const podCastContainer: HTMLDivElement = document.querySelector(
+  ".podcastList"
+) as HTMLDivElement;
 
 let i = 0;
 
