@@ -79,5 +79,3 @@ function createTitleForPodcast(
   podcastTitle.appendChild(programName);
   podcastTitleAndDesc.appendChild(podcastTitle);
 }
-
-export default createHtmlForPodcasts;

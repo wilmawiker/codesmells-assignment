@@ -14,5 +14,3 @@ export function toggleLightMode() {
     console.log("ljust läge");
   }
 }
-
-export default toggleLightMode;
