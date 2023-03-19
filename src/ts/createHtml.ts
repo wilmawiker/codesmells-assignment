@@ -25,7 +25,6 @@ export async function createHtmlForPodcasts() {
 function createArticleForPodcastList() {
   const podcastInList = document.createElement("article");
   podcastInList.setAttribute("class", "podcast");
-  podcastInList.setAttribute("tabindex", "1");
   podCastContainer.appendChild(podcastInList);
   return podcastInList;
 }
@@ -45,7 +44,6 @@ function createLinkToPodcast(
   const linkText = document.createTextNode("Lyssna här");
   linkToPodcast.setAttribute("href", podcast.programurl);
   linkToPodcast.setAttribute("class", "podcast__link");
-  linkToPodcast.setAttribute("tabindex", "1");
   linkToPodcast.appendChild(linkText);
   podcastTitleAndDesc.appendChild(linkToPodcast);
 }
@@ -53,6 +51,7 @@ function createImgForPodcast(podcastInList: HTMLDivElement, podcast: any) {
   const podcastImg = document.createElement("IMG");
   podcastImg.setAttribute("src", podcast.socialimage);
   podcastImg.setAttribute("class", "podcast__img");
+  podcastImg.setAttribute("alt", podcast.name);
   podcastImg.setAttribute("width", "100");
   podcastImg.setAttribute("height", "100");
   podcastInList.appendChild(podcastImg);
