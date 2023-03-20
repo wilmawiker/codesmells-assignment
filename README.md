@@ -12,13 +12,13 @@ G
 - [x] Rensa loggning
 - [ ] Dokumentation
 - [x] Tillgänglighet (bilder)
-- [ ] Refaktorera funktioner
-- [ ] Eliminera onödig kod
+- [x] Refaktorera funktioner
+- [x] Eliminera onödig kod
 - [x] Rensa bort kod som inte ska sättas
 
 VG
 
-- [ ] Rätt sak på rätt plats
+- [x] Rätt sak på rätt plats
 - [ ] Hantera loggning på ett effektivt sätt
 - [ ] Gör en tillgänglighetsgranskning av sidan
 - [ ] Utnyttja features i Sass i CSS:en

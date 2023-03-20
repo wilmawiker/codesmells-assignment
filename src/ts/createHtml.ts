@@ -1,20 +1,15 @@
-import { getPodcasts } from "./api";
+import { /* getPodcasts, */ getPodcastsWithAxios } from "./api";
 
-const podCastContainer: HTMLDivElement = document.querySelector(
-  ".podcastList"
-) as HTMLDivElement;
+const podCastContainer: HTMLDivElement = document.querySelector(".podcastList") as HTMLDivElement;
 
 export async function createHtmlForPodcasts() {
-  const podCasts = await getPodcasts();
+  const podCasts = await getPodcastsWithAxios();
   podCasts.programs.forEach((podcast: any) => {
-    const podcastInList: HTMLDivElement =
-      createArticleForPodcastList() as HTMLDivElement;
+    const podcastInList: HTMLDivElement = createArticleForPodcastList() as HTMLDivElement;
 
     createImgForPodcast(podcastInList, podcast);
 
-    const podcastTitleAndDesc: HTMLDivElement = createContainerForTitleAndDesc(
-      podcastInList
-    ) as HTMLDivElement;
+    const podcastTitleAndDesc: HTMLDivElement = createContainerForTitleAndDesc(podcastInList) as HTMLDivElement;
 
     createTitleForPodcast(podcastTitleAndDesc, podcast);
     createDescriptionForPodcast(podcastTitleAndDesc, podcast);
@@ -36,10 +31,7 @@ function createContainerForTitleAndDesc(podcastInList: HTMLDivElement) {
   return podcastTitleAndDesc;
 }
 
-function createLinkToPodcast(
-  podcastTitleAndDesc: HTMLDivElement,
-  podcast: any
-) {
+function createLinkToPodcast(podcastTitleAndDesc: HTMLDivElement, podcast: any) {
   const linkToPodcast = document.createElement("a");
   const linkText = document.createTextNode("Lyssna här");
   linkToPodcast.setAttribute("href", podcast.programurl);
@@ -57,10 +49,7 @@ function createImgForPodcast(podcastInList: HTMLDivElement, podcast: any) {
   podcastInList.appendChild(podcastImg);
 }
 
-function createDescriptionForPodcast(
-  podcastTitleAndDesc: HTMLDivElement,
-  podcast: any
-) {
+function createDescriptionForPodcast(podcastTitleAndDesc: HTMLDivElement, podcast: any) {
   const podcastDesc = document.createElement("p");
   const desc = document.createTextNode(podcast.description);
   podcastDesc.setAttribute("class", "podcast__desc");
@@ -68,10 +57,7 @@ function createDescriptionForPodcast(
   podcastTitleAndDesc.appendChild(podcastDesc);
 }
 
-function createTitleForPodcast(
-  podcastTitleAndDesc: HTMLDivElement,
-  podcast: any
-) {
+function createTitleForPodcast(podcastTitleAndDesc: HTMLDivElement, podcast: any) {
   const podcastTitle = document.createElement("h2");
   podcastTitle.setAttribute("class", "podcast__title");
   const programName = document.createTextNode(podcast.name);
