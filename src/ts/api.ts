@@ -1,7 +1,6 @@
 export async function getPodcasts() {
-  return await fetch(
-    "https://api.sr.se/api/v2/programs/index?programcategoryid=133&format=json&pagination=false&indent=true&filter=program.archived&filterValue=false"
-  )
+  //@ts-ignore
+  return await fetch(import.meta.env.VITE_PODCAST_API_URL)
     .then((data) => data.json())
     .then((json) => json)
     .catch((error) => {
