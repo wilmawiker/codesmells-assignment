@@ -4,7 +4,7 @@ const podCastContainer: HTMLDivElement = document.querySelector(
   ".podcastList"
 ) as HTMLDivElement;
 
-export async function createHtmlForPodcasts() {
+export async function createHtmlForPodcasts(): Promise<void> {
   const podCasts = await getPodcasts();
   podCasts.programs.forEach((podcast: any) => {
     const podcastInList: HTMLDivElement =
@@ -12,9 +12,8 @@ export async function createHtmlForPodcasts() {
 
     createImgForPodcast(podcastInList, podcast);
 
-    const podcastTitleAndDesc: HTMLDivElement = createContainerForTitleAndDesc(
-      podcastInList
-    ) as HTMLDivElement;
+    const podcastTitleAndDesc: HTMLDivElement =
+      createContainerForTitleAndDesc(podcastInList);
 
     createTitleForPodcast(podcastTitleAndDesc, podcast);
     createDescriptionForPodcast(podcastTitleAndDesc, podcast);
@@ -22,7 +21,7 @@ export async function createHtmlForPodcasts() {
   });
 }
 
-function createArticleForPodcastList() {
+function createArticleForPodcastList(): HTMLElement {
   const podcastInList = document.createElement("article");
   podcastInList.setAttribute("class", "podcast");
   podcastInList.setAttribute("tabindex", "1");
@@ -30,7 +29,9 @@ function createArticleForPodcastList() {
   return podcastInList;
 }
 
-function createContainerForTitleAndDesc(podcastInList: HTMLDivElement) {
+function createContainerForTitleAndDesc(
+  podcastInList: HTMLDivElement
+): HTMLDivElement {
   const podcastTitleAndDesc = document.createElement("div");
   podcastTitleAndDesc.setAttribute("class", "podcast__name");
   podcastInList.appendChild(podcastTitleAndDesc);
@@ -40,7 +41,7 @@ function createContainerForTitleAndDesc(podcastInList: HTMLDivElement) {
 function createLinkToPodcast(
   podcastTitleAndDesc: HTMLDivElement,
   podcast: any
-) {
+): void {
   const linkToPodcast = document.createElement("a");
   const linkText = document.createTextNode("Lyssna här");
   linkToPodcast.setAttribute("href", podcast.programurl);
@@ -49,7 +50,10 @@ function createLinkToPodcast(
   linkToPodcast.appendChild(linkText);
   podcastTitleAndDesc.appendChild(linkToPodcast);
 }
-function createImgForPodcast(podcastInList: HTMLDivElement, podcast: any) {
+function createImgForPodcast(
+  podcastInList: HTMLDivElement,
+  podcast: any
+): void {
   const podcastImg = document.createElement("IMG");
   podcastImg.setAttribute("src", podcast.socialimage);
   podcastImg.setAttribute("class", "podcast__img");
@@ -61,7 +65,7 @@ function createImgForPodcast(podcastInList: HTMLDivElement, podcast: any) {
 function createDescriptionForPodcast(
   podcastTitleAndDesc: HTMLDivElement,
   podcast: any
-) {
+): void {
   const podcastDesc = document.createElement("p");
   const desc = document.createTextNode(podcast.description);
   podcastDesc.setAttribute("class", "podcast__desc");
@@ -72,7 +76,7 @@ function createDescriptionForPodcast(
 function createTitleForPodcast(
   podcastTitleAndDesc: HTMLDivElement,
   podcast: any
-) {
+): void {
   const podcastTitle = document.createElement("h2");
   podcastTitle.setAttribute("class", "podcast__title");
   const programName = document.createTextNode(podcast.name);

@@ -2,9 +2,9 @@ import "./style.scss";
 import { createHtmlForPodcasts } from "./src/ts/createHtml";
 import { toggleLightMode } from "./src/ts/toggleDarkmode";
 
-async function init() {
+function init(): void {
   toggleLightMode();
-  await createHtmlForPodcasts();
+  void createHtmlForPodcasts();
 }
 
 init();
