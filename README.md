@@ -25,7 +25,7 @@ Sidan listar alla SR's humorprogram i form av podcasts. Omslag, titel, beskrivni
 
 `npm install`
 
-`npm run dev/build`
+`npm run dev/build/preview`
 
 ---
 
