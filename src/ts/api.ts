@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import axios from "axios";
 import { createHtmlForError } from "./createHtml";
+import { log } from "./handleLogs";
 
 export async function getPodcastsWithAxios(): Promise<any> {
   try {
@@ -10,5 +11,6 @@ export async function getPodcastsWithAxios(): Promise<any> {
     return podcastResponse.data;
   } catch (error) {
     createHtmlForError("Oj, något gick fel när vi försökte hämta alla podcasts!");
+    log("ERROR: Podcasts couldn't load correctly!");
   }
 }
