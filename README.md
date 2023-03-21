@@ -2,8 +2,8 @@
 
 Sidan listar alla SR's humorprogram i form av podcasts. Omslag, titel, beskrivning och en länk till podcasten presenteras och sidan kan visas i både ljust och mörkt läge.
 
-![Bild av projektet](assets\sr-humorprogram.png)
-![Bild av Lighthouse-anays](assets\doc-lighthouse.png)
+![Bild av projektet](https://dl.dropboxusercontent.com/s/srk50hxxvu3y74g/Screenshot%202023-03-21%20083800.png?dl=0)
+![Bild av Lighthouse-anays](https://dl.dropboxusercontent.com/s/47e9ryijfxhzp39/Screenshot%202023-03-21%20095420.png?dl=0)
 
 ---
 
