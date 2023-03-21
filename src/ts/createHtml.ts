@@ -6,6 +6,7 @@ export async function createHtmlForPodcasts(): Promise<void> {
   const podCasts = await getPodcastsWithAxios();
   podCasts.programs.forEach((podcast: any) => {
     const podcastInList: HTMLDivElement = createArticleForPodcastList() as HTMLDivElement;
+    podCastContainer.appendChild(podcastInList);
 
     createImgForPodcast(podcastInList, podcast);
 
@@ -20,7 +21,6 @@ export async function createHtmlForPodcasts(): Promise<void> {
 function createArticleForPodcastList(): HTMLElement {
   const podcastInList = document.createElement("article");
   podcastInList.setAttribute("class", "podcast");
-  podCastContainer.appendChild(podcastInList);
   return podcastInList;
 }
 
