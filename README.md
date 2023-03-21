@@ -55,7 +55,7 @@ VG
 - [x] Utnyttja features i Sass i CSS:en
 - [x] Rensa bort paket som inte används
 - [x] Hantera fel i API-anropet
-- [ ] Gör en Lighthouse-analys
+- [x] Gör en Lighthouse-analys
 - [ ] Läs av utvecklingsmiljön
 - [ ] Enhetlig syntax i CSS:en
 - [ ] Publicera sidan på GitHub pages
