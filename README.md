@@ -1,4 +1,32 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10475230&assignment_repo_type=AssignmentRepo)
+# Inlämningsuppgift
+
+Sidan listar alla SR's humorprogram i form av podcasts. Omslag, titel, beskrivning och en länk till podcasten presenteras och sidan kan visas i både ljust och mörkt läge.
+
+---
+
+## Tekniker som använts
+
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) För styling av sidan.
+
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) För att bygga upp och köra sidan både i dev, build och preview.
+
+![TypeScript](https://img.shields.io/badge/typescript-&23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) För en tydligare kod med typdefinitioner och bättre struktur.
+
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) För en finare, mer enhetlig kod som följer en standard.
+
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=eslint&logoColor=white) För att exekvera TypeScript-kod.
+
+---
+
+### För att starta
+
+`npm install`
+
+`npm run dev/build`
+
+---
+
+#### Kravlista/checklista
 
 G
 
@@ -10,7 +38,7 @@ G
 - [x] Mobilvyn
 - [x] Språk
 - [x] Rensa loggning
-- [ ] Dokumentation
+- [x] Dokumentation
 - [x] Tillgänglighet (bilder)
 - [x] Refaktorera funktioner
 - [x] Eliminera onödig kod
