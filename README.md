@@ -6,7 +6,7 @@ G
 - [x] CSS till Sass
 - [x] Enhetlig namngivning i CSS:en
 - [x] Konvertera till TypeScript
-- [ ] Enhetlig kodkvalitet
+- [x] Enhetlig kodkvalitet
 - [x] Mobilvyn
 - [x] Språk
 - [x] Rensa loggning
@@ -21,9 +21,9 @@ VG
 - [x] Rätt sak på rätt plats
 - [ ] Hantera loggning på ett effektivt sätt
 - [ ] Gör en tillgänglighetsgranskning av sidan
-- [ ] Utnyttja features i Sass i CSS:en
+- [x] Utnyttja features i Sass i CSS:en
 - [ ] Rensa bort paket som inte används
-- [ ] Hantera fel i API-anropet
+- [x] Hantera fel i API-anropet
 - [ ] Gör en Lighthouse-analys
 - [ ] Läs av utvecklingsmiljön
 - [ ] Enhetlig syntax i CSS:en

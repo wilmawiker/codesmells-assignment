@@ -64,3 +64,10 @@ function createTitleForPodcast(podcastTitleAndDesc: HTMLDivElement, podcast: any
   podcastTitle.appendChild(programName);
   podcastTitleAndDesc.appendChild(podcastTitle);
 }
+
+export function createHtmlForError(errorMsg: string): void {
+  const presentError = document.createElement("h1");
+  const errorMsgToPresent = document.createTextNode(errorMsg);
+  presentError.appendChild(errorMsgToPresent);
+  document.body.appendChild(presentError);
+}
