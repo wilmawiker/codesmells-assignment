@@ -43,7 +43,8 @@ function createImgForPodcast(podcastInList: HTMLDivElement, podcast: any): void 
   const podcastImg = document.createElement("IMG");
   podcastImg.setAttribute("src", podcast.socialimage);
   podcastImg.setAttribute("class", "podcast__img");
-  podcastImg.setAttribute("alt", podcast.name);
+  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+  podcastImg.setAttribute("alt", `Omslag för podcasten: ${podcast.name}`);
   podcastImg.setAttribute("width", "100");
   podcastImg.setAttribute("height", "100");
   podcastInList.appendChild(podcastImg);
