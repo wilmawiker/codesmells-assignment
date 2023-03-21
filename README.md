@@ -2,6 +2,8 @@
 
 Sidan listar alla SR's humorprogram i form av podcasts. Omslag, titel, beskrivning och en länk till podcasten presenteras och sidan kan visas i både ljust och mörkt läge.
 
+![Bild av projektet](images\sr-humorprogram.png)
+
 ---
 
 ## Tekniker som använts
