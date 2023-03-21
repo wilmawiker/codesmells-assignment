@@ -1,4 +1,5 @@
 import { getPodcastsWithAxios } from "./api";
+import { log } from "./handleLogs";
 
 const podCastContainer: HTMLDivElement = document.querySelector(".podcastList") as HTMLDivElement;
 
@@ -16,6 +17,7 @@ export async function createHtmlForPodcasts(): Promise<void> {
     createDescriptionForPodcast(podcastTitleAndDesc, podcast);
     createLinkToPodcast(podcastTitleAndDesc, podcast);
   });
+  log("Podcast loaded succesfully!");
 }
 
 function createArticleForPodcastList(): HTMLElement {
